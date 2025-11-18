@@ -32,7 +32,6 @@ async function loadPost() {
 
         title.innerText = post.title;
         body.innerText = post.body;
-        cardPost.classList.remove("d-none");
 
         const commentsRes = await fetch(`https://jsonplaceholder.typicode.com/comments?postId=${id}`);
         if (!commentsRes.ok) throw new Error("Kon comments niet laden");
