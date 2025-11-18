@@ -45,12 +45,12 @@ async function loadPost() {
                     <p class="mb-0">${c.body}</p>
                 </li>
             `).join("");
-            empty.style.display = "none";
         }
 
         cardCom.classList.remove("d-none");
         status.className = "alert alert-success";
         status.innerText = `Post en ${comments.length} comment(s) geladen!`;
+        empty.innerText = `${comments.length} comment(s) geladen!`;
 
     } catch (err) {
         status.innerText = "❌ Kon JSON niet laden";
