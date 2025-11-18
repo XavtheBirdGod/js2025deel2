@@ -15,9 +15,6 @@ async function loadPost() {
     const list = document.getElementById("ex3_comments_list");
     const empty = document.getElementById("ex3_comments_empty");
 
-    list.innerHTML = "";
-    empty.style.display = "block";
-
     if (!id || id < 1) {
         status.className = "alert alert-danger";
         status.innerText = "Vul een nummer groter dan 0 in";
